@@ -2,7 +2,7 @@
 
 build:
 
-    $ go build svnclear
+    $ go build svnclear.go
 
 usage:
 
