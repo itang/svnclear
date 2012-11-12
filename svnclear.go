@@ -18,8 +18,12 @@ func main() {
 	filepath.Walk(*targetDir, func(path string, info os.FileInfo, err error) error {
 		if info.IsDir() && info.Name() == ".svn" {
 			fmt.Printf(">try to delete \"%v\"\n", path)
-			os.RemoveAll(path)
-			count++
+			err := os.RemoveAll(path)
+			if err != nil {
+				fmt.Printf("%v\n", err)
+			} else {
+				count++
+			}
 			return filepath.SkipDir
 		}
 		return nil
