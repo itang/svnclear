@@ -1,11 +1,17 @@
 ### clear .svn
 
-build:
+### Install
 
-    $ go build svnclear.go
+    $ git clone https://github.com/itang/svnclear.git
+    $ cd svnclear && go build svnclear.go
+    
+    or
+    
+    $ go get -u github.com/itang/svnclear
+    $ go install github.com/itang/svnclear
 
-usage:
+Usage:
 
-    $ ./svnclear --help
-    $ ./svnclear -dir .
+    $ svnclear --help
+    $ svnclear -dir .
 
